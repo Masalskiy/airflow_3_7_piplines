@@ -1,0 +1,17 @@
+[2023-12-07T21:09:02.984+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: good_morning_1.say_hello scheduled__2023-12-07T21:08:00+00:00 [queued]>
+[2023-12-07T21:09:02.996+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: good_morning_1.say_hello scheduled__2023-12-07T21:08:00+00:00 [queued]>
+[2023-12-07T21:09:02.996+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-12-07T21:09:03.040+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): say_hello> on 2023-12-07 21:08:00+00:00
+[2023-12-07T21:09:03.054+0000] {standard_task_runner.py:57} INFO - Started process 1863 to run task
+[2023-12-07T21:09:03.063+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'good_morning_1', 'say_hello', 'scheduled__2023-12-07T21:08:00+00:00', '--job-id', '266', '--raw', '--subdir', 'DAGS_FOLDER/good_mornig.py', '--cfg-path', '/tmp/tmp_ncfwhov']
+[2023-12-07T21:09:03.072+0000] {standard_task_runner.py:85} INFO - Job 266: Subtask say_hello
+[2023-12-07T21:09:03.198+0000] {task_command.py:416} INFO - Running <TaskInstance: good_morning_1.say_hello scheduled__2023-12-07T21:08:00+00:00 [running]> on host 1ab12098bb1e
+[2023-12-07T21:09:03.341+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mdv' AIRFLOW_CTX_DAG_ID='good_morning_1' AIRFLOW_CTX_TASK_ID='say_hello' AIRFLOW_CTX_EXECUTION_DATE='2023-12-07T21:08:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-07T21:08:00+00:00'
+[2023-12-07T21:09:03.345+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-12-07T21:09:03.346+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning my diggers!"']
+[2023-12-07T21:09:03.377+0000] {subprocess.py:86} INFO - Output:
+[2023-12-07T21:09:03.383+0000] {subprocess.py:93} INFO - Good morning my diggers!
+[2023-12-07T21:09:03.385+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-12-07T21:09:03.442+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=good_morning_1, task_id=say_hello, execution_date=20231207T210800, start_date=20231207T210902, end_date=20231207T210903
+[2023-12-07T21:09:03.515+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-07T21:09:03.562+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

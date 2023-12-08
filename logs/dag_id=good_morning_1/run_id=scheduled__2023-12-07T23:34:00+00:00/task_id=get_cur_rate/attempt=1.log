@@ -1,0 +1,16 @@
+[2023-12-07T23:35:06.529+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: good_morning_1.get_cur_rate scheduled__2023-12-07T23:34:00+00:00 [queued]>
+[2023-12-07T23:35:06.545+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: good_morning_1.get_cur_rate scheduled__2023-12-07T23:34:00+00:00 [queued]>
+[2023-12-07T23:35:06.546+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-12-07T23:35:06.568+0000] {taskinstance.py:1382} INFO - Executing <Task(DockerOperator): get_cur_rate> on 2023-12-07 23:34:00+00:00
+[2023-12-07T23:35:06.580+0000] {standard_task_runner.py:57} INFO - Started process 5222 to run task
+[2023-12-07T23:35:06.584+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'good_morning_1', 'get_cur_rate', 'scheduled__2023-12-07T23:34:00+00:00', '--job-id', '559', '--raw', '--subdir', 'DAGS_FOLDER/good_mornig.py', '--cfg-path', '/tmp/tmpjhq7paz1']
+[2023-12-07T23:35:06.588+0000] {standard_task_runner.py:85} INFO - Job 559: Subtask get_cur_rate
+[2023-12-07T23:35:06.661+0000] {task_command.py:416} INFO - Running <TaskInstance: good_morning_1.get_cur_rate scheduled__2023-12-07T23:34:00+00:00 [running]> on host 1ab12098bb1e
+[2023-12-07T23:35:06.809+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mdv' AIRFLOW_CTX_DAG_ID='good_morning_1' AIRFLOW_CTX_TASK_ID='get_cur_rate' AIRFLOW_CTX_EXECUTION_DATE='2023-12-07T23:34:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-07T23:34:00+00:00'
+[2023-12-07T23:35:06.863+0000] {docker.py:343} INFO - Starting docker container from image masalskii/ex-rate
+[2023-12-07T23:35:06.881+0000] {docker.py:351} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2023-12-07T23:35:08.531+0000] {docker.py:413} INFO - ['exchangerate.py', 'l', 'BTC', 'RUB']
+[2023-12-07T23:35:08.790+0000] {docker.py:413} INFO - {'success': True, 'terms': 'https://currencylayer.com/terms', 'privacy': 'https://currencylayer.com/privacy', 'timestamp': 1701992103, 'source': 'BTC', 'quotes': {'BTCRUB': 3999802.722047}}
+[2023-12-07T23:35:09.156+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=good_morning_1, task_id=get_cur_rate, execution_date=20231207T233400, start_date=20231207T233506, end_date=20231207T233509
+[2023-12-07T23:35:09.211+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-07T23:35:09.243+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
